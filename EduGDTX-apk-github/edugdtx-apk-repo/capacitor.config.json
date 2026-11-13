@@ -1,0 +1,9 @@
+{
+  "appId": "vn.edugdtx.mobile",
+  "appName": "EduGDTX",
+  "webDir": "www",
+  "server": {
+    "url": "https://powers-handy-joins-prototype.trycloudflare.com",
+    "cleartext": false
+  }
+}
