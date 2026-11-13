@@ -6,9 +6,6 @@ on:
 jobs:
   apk:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: edugdtx-apk-repo
     steps:
       - uses: actions/checkout@v4
       - name: Kiem tra da sua server.url
@@ -26,8 +23,8 @@ jobs:
       - run: npx cap sync android
       - name: Build APK (debug)
         run: ./gradlew assembleDebug
-        working-directory: edugdtx-apk-repo/android
+        working-directory: android
       - uses: actions/upload-artifact@v4
         with:
           name: EduGDTX-apk
-          path: edugdtx-apk-repo/android/app/build/outputs/apk/debug/app-debug.apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
